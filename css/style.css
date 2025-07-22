@@ -6,12 +6,14 @@ body {
   padding: 0;
   line-height: 1.8;
 }
+
 header {
   background-color: #005f5f;
   color: white;
   padding: 20px;
   text-align: center;
 }
+
 nav ul {
   display: flex;
   flex-wrap: wrap;
@@ -22,28 +24,54 @@ nav ul {
   margin: 0;
   background-color: #007777;
 }
+
 nav ul li a {
   display: block;
   color: white;
   text-decoration: none;
   padding: 15px 10px;
 }
+
 section {
   padding: 20px;
   max-width: 900px;
   margin: auto;
 }
+
 h2 {
   color: #007777;
 }
+
 footer {
   text-align: center;
   padding: 15px;
   background-color: #e0f7fa;
   margin-top: 40px;
 }
+
+/* 👇 این بخش مخصوص موبایل هست */
 @media (max-width: 600px) {
   nav ul {
     flex-direction: column;
+    align-items: flex-end;
+  }
+
+  nav ul li {
+    width: 100%;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    text-align: right;
+  }
+
+  nav ul li a {
+    padding: 15px;
+  }
+
+  section {
+    padding: 10px;
+  }
+
+  footer {
+    font-size: 14px;
   }
 }
