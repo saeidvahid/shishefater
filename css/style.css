@@ -1,3 +1,4 @@
+
 body {
   font-family: Tahoma, sans-serif;
   background-color: #f8f8f8;
@@ -5,71 +6,57 @@ body {
   padding: 0;
   line-height: 1.8;
 }
-
 header {
   background-color: #005f5f;
   color: white;
   padding: 20px;
   text-align: center;
 }
-
 nav ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 20px;
   list-style: none;
   padding: 0;
   margin: 0;
   background-color: #007777;
 }
-
-nav ul li {
-  padding: 0;
-}
-
 nav ul li a {
   display: block;
   color: white;
   text-decoration: none;
-  padding: 15px 20px;
+  padding: 15px 10px;
 }
-
 section {
   padding: 20px;
   max-width: 900px;
   margin: auto;
 }
-
+h2 {
+  color: #007777;
+}
 footer {
   text-align: center;
   padding: 15px;
   background-color: #e0f7fa;
   margin-top: 40px;
 }
-
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   nav ul {
     flex-direction: column;
-    align-items: flex-end;
   }
+}
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+  padding: 20px;
+}
 
-  nav ul li {
-    width: auto;
-  }
-
-  nav ul li a {
-    display: inline-block;
-    width: auto;
-    padding: 8px 15px;
-    font-size: 14px;
-    border-bottom: 1px solid #ccc;
-    text-align: right;
-  }
-
-  section {
-    padding: 15px;
-  }
-
-  footer {
-    font-size: 14px;
-  }
+.gallery img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
